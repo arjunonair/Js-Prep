@@ -7,7 +7,23 @@
     <link rel= "stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="heading">Heading</h1>
-    <script src="script.js"></script>
+    <h1 id="heading">Heading</h1>
+    <div id="app"></div>
+    <div id="event">event</div>
+    <form id="myForm">
+        <input type ="text" name="username" />
+        <button type="submit">submit</button>
+    </form>
+    <script>
+        const head = document.getElementById('heading')
+        head.style.color = 'blue'
+
+        const formData = document.getElementById('myForm')
+        formData.addEventListener('submit',(e)=>{
+            e.preventDefault()
+            const user = formData.elements.username.value
+            alert(`Hello,${user}`)
+        })
+    </script>
 </body>
 </html>

@@ -83,3 +83,34 @@
 // }
 
 // fun()
+
+const data = [
+    {name:'A',age:1},
+    {name:'B',age:2},
+    {name:'C',age:3}
+]
+
+console.log(data);
+
+const app = document.getElementById('app')
+
+// res.map((item) =>{
+//     const text = `${item.name} : ${item.age}`
+//     app.innerHTML += text + '<br>'
+// })
+
+const evenT = document.getElementById('event')
+
+evenT.addEventListener('mouseover',()=>{
+    evenT.textContent = 'hover'
+})
+evenT.addEventListener('mouseout',()=>{
+    evenT.textContent = 'event'
+})
+
+const formData = document.getElementById('myForm')
+
+formData.addEventListener('change',()=>{
+    const user = input.value
+    alert(`Hello,${user}`)
+})
